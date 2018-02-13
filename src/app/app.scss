@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/v2/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,82 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+ion-menu .fixed-content,
+ion-menu button {
+  background-color: grey !important;
+}
+
+ion-menu .fixed-content,
+button ion-label {
+  color: white
+}
+
+.content {
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(237, 237, 237, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(237, 237, 237, 1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(237, 237, 237, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+}
+
+.toolbar-background {
+  background: #881119;
+}
+
+.toolbar-title {
+  color: #fff;
+}
+
+.card-header {
+  background: grey;
+  color: white;
+}
+
+ion-card-content.card-content {
+  padding: 20px !important;
+}
+
+@media (min-width: 1024px) {
+  ion-menu {
+    /*!* always show menu *!*/
+    display: block;
+  }
+  ion-menu[type=overlay] {
+    width: 312px;
+  }
+  .menu-inner {
+    /* !* always show menu *!*/
+    transform: translateX(0px) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25) !important;
+  }
+  ion-nav.menu-content {
+    /*!* always show menu content *!*/
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    transform: translateX(304px) !important;
+  }
+  .ion-page {
+    /*!* recalculate page contents width deducted by menu width *!*/
+    width: calc(100% - 304px) !important;
+  }
+  button[menutoggle] {
+    /*!* hide all non-working menu buttons *!*/
+    display: none;
+  }
+  ion-menu[type=reveal] {
+    z-index: 1;
+    width: 312px;
+  }
+}
