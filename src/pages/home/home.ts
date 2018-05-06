@@ -12,4 +12,9 @@ export class HomePage {
 
   }
 
+  goToPage(page){
+    this.navCtrl.setRoot(page);
+
+  }
+
 }

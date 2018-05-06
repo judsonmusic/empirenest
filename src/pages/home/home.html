@@ -10,14 +10,30 @@
 <ion-content padding> 
   <ion-grid>
     <ion-row>
-      <ion-col col-12><img src="/assets/images/banner.jpg" style="width: 100%"></ion-col>
+      <ion-col col-12 text-center><img src="/assets/images/logo_1.png" style="max-width: 100%;"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><img src="/assets/images/premium_white/aaaa.jpg"/></ion-col>
+      <ion-col><img src="/assets/images/red/250_aaaa.jpg"/></ion-col>
+      <ion-col><img src="/assets/images/orange/aaaa.jpg"/></ion-col>
+      <ion-col><img src="/assets/images/gold/aaaa.jpg"/></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <hr>
+        <p>Our farming and cleaning process is 100% manual, without using any artificial coloring and chemical ingredients.</p>
+      <hr>
+    </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-card>
           <ion-card-header>Products</ion-card-header>
-          <ion-card-content>
-            Product Information Will go here..
+          <ion-card-content c-padding>
+              <p>We carry a wide selection of bird's nests. We have A-AAAAA (all grades) in various colors. Click the button below to view our products.</p>             
+                  
+              <button ion-button (click)="goToPage('products')">Products Page</button>            
+           
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -25,15 +41,20 @@
         <ion-card>
           <ion-card-header>About</ion-card-header>
           <ion-card-content>
-            Product Information Will go here..
+            <p>We are the owners and sole manufacturers of the Empire Nest processing center in East Java Indonesia.
+                We offer the finest quality of edible bird nests in several grades, shapes, sizes & color.  Our state of the art processing lines guarantees perfect quality and the best possible prices....
+                </p>
+                <button ion-button (click)="goToPage('about')">Learn More</button>    
           </ion-card-content>
         </ion-card>
       </ion-col>
        <ion-col>
         <ion-card>
-          <ion-card-header>Policies</ion-card-header>
+          <ion-card-header>Shipping Policies</ion-card-header>
           <ion-card-content>
-            Product Information Will go here..
+            <p>Shipping polcies are located on the about us page.</p>
+            <br>Please call to order. <br>
+            <h2><a href="tel:313-510-1310">313-510-1310</a></h2>
           </ion-card-content>
         </ion-card>
       </ion-col>

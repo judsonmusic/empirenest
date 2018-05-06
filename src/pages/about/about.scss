@@ -1,3 +1,11 @@
-page-about {
-
+.page-about {
+    background-color: black;
+    background-image: url('http://localhost:8100/assets/images/color_full.jpg');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+.bg-black{
+    background: rgba(0,0,0,0.7);
+    color: white;
 }

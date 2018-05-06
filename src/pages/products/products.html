@@ -10,4 +10,50 @@
 
 <ion-content padding>
 
+    <h1>Our Products (Wholesale Customers Only)</h1>
+    <h2>Please call <a href="tel:313-510-1310">313-510-1310</a> to order</h2>
+    <hr>  
+    <ion-grid>
+      <ion-row  *ngFor="let r of results">
+        <ion-col col-12><h3 text-red>Grade {{r.grade}}</h3><hr></ion-col>
+        <ion-col col-12 col-sm-6 col-md-4 col-lg-4 *ngFor="let item of r.products; let i = index;">
+          <ion-card>
+            <ion-card-header>{{item.description}}</ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                <ion-col col-4 col-sm-12 col-sp-100 col-lg-4 text-center><a href="javascript:void(0);" (click)="showPicture(item)"><img src="{{'assets/images/' + item.image}}"/>click to view</a></ion-col>
+                <ion-col col-8 col-sm-12 col-sp-100 col-lg-8>            
+                  <ion-list>
+                    <!-- <ion-item>                                          -->
+                        <!-- <ion-select type="text" name="weights" [(ngModel)]="item.selectedWeight" placeholder="Please select weight"> -->
+                            <!-- <ion-option *ngFor="let w of item.prices" [value]="w">{{w.weight}}</ion-option> -->
+                          <!-- </ion-select> -->
+                    <!-- </ion-item> -->
+                    <!-- <ion-item> -->
+                        <!-- <ion-label stacked>Qty. {{item.qty}} (box)</ion-label> -->
+                        <!-- <ion-input type="text" [value]="1" [(ngModel)]="item.qty" (input)="calcPrice(item)"></ion-input>                         -->
+                        <!-- <ion-select type="text" name="quantities" [(ngModel)]="item.qty" placeholder="Please select quantity"> -->
+                            <!-- <ion-option *ngFor="let q of quantities" [value]="q"  (ionSelect)="calcPrice(item, q)">{{q}}</ion-option> -->
+                          <!-- </ion-select> -->
+                      <!-- </ion-item> -->
+                      <ion-item text-wrap>
+                        <ion-list *ngFor="let p of item.prices">
+                          {{p.weight}} <span text-green>${{p.price.toFixed(2)}}</span>
+                        </ion-list>
+                      </ion-item>
+                  </ion-list>                  
+                     
+                      <br>
+                      <!-- Price: {{item.price | currency}} -->
+                      <!-- Total: {{item.subTotal | currency}} -->
+                </ion-col>
+              </ion-row>
+              </ion-grid>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-content>

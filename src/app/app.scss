@@ -16,6 +16,102 @@ html {
   height: 100%;
 }
 
+html,
+body {
+  color: #444444;
+}
+
+.bar-buttons{
+  color: white !important;
+}
+modal-wrapper {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+}
+
+[c-padding]{
+  padding: 16px;
+}
+
+@media (min-width: 992px) and (max-width: 1500px) {
+  [col-sp-100]{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media not all and (min-height: 600px) and (min-width: 768px) {
+  ion-modal ion-backdrop {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-height: 0px) and (min-width: 0px) {
+  .modal-wrapper {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 1024px;
+  }
+}
+.close-button{
+  color: black;
+  cursor: pointer;
+  .ion-ios-close-outline:before{
+    color: black;
+  }
+  .button-inner{
+      background: white;
+  }
+}
+
+ion-title {
+  display: inline-block;
+}
+
+[text-center] {
+  text-align: center;
+}
+
+[text-green] {
+  color: green;
+}
+
+[text-red] {
+  color: #881119
+}
+
+[float-right] {
+  float: right;
+}
+
+[text-right] {
+  text-align: right;
+}
+
+ion-select {
+  width: 100%;
+  max-width: 100%;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -25,7 +121,7 @@ body {
 
 ion-menu .fixed-content,
 ion-menu button {
-  background-color: grey !important;
+  background-color: #666 !important;
 }
 
 ion-menu .fixed-content,
@@ -56,6 +152,12 @@ button ion-label {
 
 ion-card-content.card-content {
   padding: 20px !important;
+}
+
+//hack for modal wrapper!!!! must use with below code...
+.modal-wrapper .ion-page.show-page {
+  background: white !important;
+  width: 100% !important;
 }
 
 @media (min-width: 1024px) {
