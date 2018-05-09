@@ -11,7 +11,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage({ name: "products" })
+@IonicPage({ name: "products", segment: "products" })
 @Component({
   selector: 'page-products',
   templateUrl: 'products.html',

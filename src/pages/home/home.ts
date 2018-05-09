@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 
-@IonicPage({name: "home"})
+@IonicPage({name: "home", segment: "home"})
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
